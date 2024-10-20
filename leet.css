@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* Sleek and modern font */
+}
+
+body {
+    background-color: #1C1F2E;
+    /* Dark blue-gray background for better focus on content */
+    color: #F7F7F7;
+    /* Soft white text */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #2F3345;
+    /* Dark container color for good contrast */
+    padding: 30px;
+    border-radius: 16px;
+    width: 55%;
+    max-width: 700px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Deep shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    /* Slight scaling effect to make the container more dynamic */
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #56CCF2;
+    /* Soft cyan for accent heading */
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: start;
+}
+
+.user-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-input {
+    width: 75%;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 2px solid #F2994A;
+    /* Highlight border in orange */
+    background-color: #ECECEC;
+    /* Softer light background */
+    color: #2C3E50;
+    /* Dark input text color */
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#user-input:focus {
+    border-color: #56CCF2;
+    /* Cyan border on focus for clear visual feedback */
+    outline: none;
+}
+
+#search-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    background-color: #BB6BD9;
+    /* Vibrant purple button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(187, 107, 217, 0.6);
+    /* Glowing effect */
+}
+
+#search-btn:hover {
+    background-color: #9B51E0;
+    /* Darker purple on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(187, 107, 217, 0.8);
+    /* Enhanced shadow on hover */
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background: conic-gradient(#27AE60 var(--progress-degree, 0%), #1C1F2E 0%);
+    /* Easy level in green */
+    transition: all 0.5s ease-in-out;
+}
+
+.circle.medium {
+    background: conic-gradient(#F2C94C var(--progress-degree, 0%), #1C1F2E 0%);
+    /* Medium level in yellow */
+}
+
+.circle.hard {
+    background: conic-gradient(#EB5757 var(--progress-degree, 0%), #1C1F2E 0%);
+    /* Hard level in red */
+}
+
+.circle:hover {
+    transform: rotate(360deg);
+    /* 360-degree rotation on hover */
+}
+
+.circle span {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.stats-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+h4 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card {
+    background-color: #2D9CDB;
+    /* Soft blue for card background */
+    color: #1C1F2E;
+    /* Dark text color */
+    width: 42%;
+    max-width: 290px;
+    padding: 15px;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    min-height: 4.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Soft shadow for cards */
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Hover effect: Lift the card up */
+    background-color: #56CCF2;
+    /* Cyan background on hover */
+    color: white;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
